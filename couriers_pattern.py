@@ -1,5 +1,4 @@
 from abc import abstractmethod, ABC
-from decimal import Decimal
 
 
 class Shipment(ABC):
@@ -33,7 +32,7 @@ class WayBill(ABC):
 
 
 class Courier(WayBill, Shipment):
-    def create_shipment(self, reference_number: str, merchant: object, customer: object, weight: Decimal):
+    def create_shipment(self, reference_number: str, merchant: object, customer: object, weight: dict):
         pass
 
     def track_shipment_status(self, reference_number: str):
